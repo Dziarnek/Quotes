@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+@mixin transform ($scale)
+    -webkit-transform: scale($scale)
+    -ms-transform: scale($scale)
+    transform: scale($scale)
+
+body
+    background-color: #55acee
+    color: white
+    font-family: 'Open Sans', sans-serif
+    main
+        height: 100vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        header
+            h1
+                font-size: 40px
+        .box
+            text-align: center
+            .quote
+                font-size: 30px
+            .author
+                font-size: 25px
+        .buttons
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            height: 100px
+            width: 250px
+            .trigger,
+            .tweet
+                color: white
+                background-color: inherit
+                font-size: 20px
+                border: 2px white solid
+                border-radius: 5px
+                width: 100%
+                text-align: center
+                padding: 5px
+                text-decoration: none
+                &:hover
+                    @include transform(1.2)
+                    transition: .2s
+                    background-color: white
+                    color: #55acee
